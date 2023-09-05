@@ -1,0 +1,45 @@
+/* DeliciousPasta.css */
+.delicious-pasta-page {
+    padding: 20px;
+  }
+  
+  .recipe-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recipe-description {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .recipe-ingredients {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .recipe-ingredients li {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .recipe-instructions {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .recipe-instructions li {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  /* Additional styling can be added as needed */
+  

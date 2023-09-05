@@ -1,0 +1,50 @@
+/* Navbar.css */
+.navbar {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #444;
+}
+
+body {
+  padding-top: 70px; /* Replace with the actual height of your navbar */
+}
+
+.navbar-brand {
+  font-family: 'Gabriola', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #dcdcdc;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #6BB3A8;
+}
+
+.form-control {
+  width: 200px;
+  margin-right: 10px;
+}
+
+.btn {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  background-color: #6BB3A8;
+  color: #fff;
+  border-color: #6BB3A8;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #4E8E86;
+  border-color: #4E8E86;
+}

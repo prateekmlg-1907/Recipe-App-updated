@@ -1,0 +1,25 @@
+/* Menu.css */
+.menu-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  width: 18rem;
+  height: 100%; /* Set a common height for all cards */
+}
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Adjust the styling based on your design preferences */
