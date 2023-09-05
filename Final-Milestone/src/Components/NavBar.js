@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Updated import
 import './Navbar.css';
 import image1 from './Crave Crafters.png';
+import { MDBInput, MDBBtn } from 'mdb-react-ui-kit';
+
 const NavBar = () => {
-  const [auth, setAuth] = useState()
-  const [user, setUser] = useState()
+  const [auth, setAuth] = useState();
+  const [user, setUser] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate(); // Initialize the useNavigate hook
 
   async function handleLogout() {
     try {
@@ -14,7 +18,7 @@ const NavBar = () => {
         credentials: 'include'
       })
     } catch {
-      console.log('somthing went wrong')
+      console.log('something went wrong')
     }
   }
 
@@ -27,15 +31,23 @@ const NavBar = () => {
         .then((res) => (res.json()))
         .then((json) => {
           if (json['status']) {
-            setAuth(true)
-            setUser(json.user)
+            setAuth(true);
+            setUser(json.user);
           } else
-            setAuth(false)
-        })
+            setAuth(false);
+        });
     } catch {
-      console.log('somthing went wrong !!!');
+      console.log('something went wrong !!!');
     }
-  }, [])
+  }, []);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim() !== '') {
+      // Use the navigate function to navigate to the search results page
+      navigate(`/search?query=${searchQuery}`);
+    }
+  };
 
   return (
     <nav className="navbar navbar-expand-md justify-content-center bg-dark navbar-dark fixed-top mb-5">
@@ -59,8 +71,17 @@ const NavBar = () => {
               <Link className="nav-link" to="/create" style={{ fontFamily: 'Comic Sans MS', fontSize: '18px', fontWeight: 'bold', color: '#A7ECEE' }}>Create Recipe</Link>
             </li>
           </ul>
-          <input className="form-control justify-center" type="search" placeholder="Search" />
-          <button type="button" class="btn btn-info ">Search</button>
+          <form className="d-flex" onSubmit={handleSearch}>
+            <MDBInput
+              type="text"
+              label="Search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <MDBBtn color="info" type="submit">
+              Search
+            </MDBBtn>
+          </form>
           {
             !auth ?
               <div>
