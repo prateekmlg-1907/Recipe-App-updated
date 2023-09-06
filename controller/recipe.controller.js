@@ -31,5 +31,4 @@ const deleteRecipe = async (req, res) => {
     await recipeModel.findOneAndDelete({_id: req.params.id})
     res.send('deleted')
 }
-
 module.exports = {addRecipe, getAllRecipe, getRecipe,deleteRecipe}

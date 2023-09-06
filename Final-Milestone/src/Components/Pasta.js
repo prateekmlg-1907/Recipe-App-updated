@@ -76,8 +76,7 @@ const Pasta = () => {
               <li>Add the cooked pasta to the skillet and toss to coat it in the sauce.</li>
               <li>Season with salt and pepper to taste.</li>
               <li>Serve hot, garnished with fresh parsley and additional Parmesan cheese if desired.</li> */}
-              {/* Add more instructions as needed */}
-            </ol>
+              {/* Add more instructions as needed */}            </ol>
           </MDBCol>
           <MDBCol md="6">
             {/* You can add additional content or images here */}

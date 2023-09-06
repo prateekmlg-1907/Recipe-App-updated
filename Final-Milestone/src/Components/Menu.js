@@ -20,7 +20,7 @@ const Menu = () => {
   }, []);
 
   const handleDeleteRecipe = (recipeId) => {
-    fetch(`/api/recipe/delete/${recipeId}`, {
+    fetch(`http://localhost:4000/api/recipe/delete/${recipeId}`, {
       method: 'DELETE',
     })
       .then((response) => {

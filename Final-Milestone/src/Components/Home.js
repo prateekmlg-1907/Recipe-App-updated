@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText } from 'mdb-react-ui-kit';
 import './Home.css';
+import { Link } from 'react-router-dom'; 
 
 const Home = (props) => {
   const [latestRecipes, setLatestRecipes] = useState([]);
@@ -39,11 +40,13 @@ const Home = (props) => {
           <MDBRow>
             <MDBCol md="4">
               <MDBCard>
+              <Link className="nav-link" to="/pasta/64f7252f870e5da929b2148d">
                 <img src="https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?cs=srgb&dl=pexels-engin-akyurt-1438672.jpg&fm=jpg" alt="Recipe" />
                 <MDBCardBody>
                   <MDBCardTitle>Delicious Pasta</MDBCardTitle>
                   <MDBCardText>A mouthwatering pasta recipe that's easy to make.</MDBCardText>
                 </MDBCardBody>
+                </Link>
               </MDBCard>
             </MDBCol>
             <MDBCol md="4">

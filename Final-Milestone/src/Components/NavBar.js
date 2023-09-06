@@ -74,13 +74,12 @@ const NavBar = () => {
           <form className="d-flex" onSubmit={handleSearch}>
             <MDBInput
               type="text"
-              label="Search"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <MDBBtn color="info" type="submit">
+            {/* <MDBBtn color="info" type="submit">
               Search
-            </MDBBtn>
+            </MDBBtn> */}
           </form>
           {
             !auth ?
